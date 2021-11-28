@@ -214,7 +214,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/Rotate Camera[/Mouse/delta/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: OnTheGround
+  m_DefaultActionMap: OnTheTower
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1579413239}
 --- !u!114 &734369737
@@ -229,6 +229,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d73d636b7cb9c44a0d43b9b6398535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &916209380 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 916209380, guid: 3e7f6e1e9c8c8534b9178d95b8cbacc1, type: 3}
+  m_PrefabInstance: {fileID: 1925512311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &950671913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -628,14 +633,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 916209379, guid: 3e7f6e1e9c8c8534b9178d95b8cbacc1, type: 3}
+      propertyPath: m_Name
+      value: AimTarget
+      objectReference: {fileID: 0}
     - target: {fileID: 1925512313, guid: 3e7f6e1e9c8c8534b9178d95b8cbacc1, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 1579413239}
-    - target: {fileID: 1925512314, guid: 3e7f6e1e9c8c8534b9178d95b8cbacc1, type: 3}
-      propertyPath: m_WalkableMask
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 99084559199445555, guid: 3e7f6e1e9c8c8534b9178d95b8cbacc1, type: 3}
+      propertyPath: aimTargetTransform
+      value: 
+      objectReference: {fileID: 916209380}
+    - target: {fileID: 2440705713951213645, guid: 3e7f6e1e9c8c8534b9178d95b8cbacc1, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1579413239}
     - target: {fileID: 6154804450335262729, guid: 3e7f6e1e9c8c8534b9178d95b8cbacc1, type: 3}
       propertyPath: m_Name
       value: Player
