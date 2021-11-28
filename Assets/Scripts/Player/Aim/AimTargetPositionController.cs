@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootTheRagdoll
+namespace ShootTheRagdoll.Player.Aim
 {
     public class AimTargetPositionController : MonoBehaviour
     {
-        [SerializeField] private Camera camera;
+        [SerializeField] private new Camera camera;
 
 
         private void Update()
         {
             Ray ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            if (Physics.SphereCast(ray, 0.2f, out RaycastHit hit))
             {
                 transform.position = hit.point;
             }

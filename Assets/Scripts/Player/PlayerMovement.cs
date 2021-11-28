@@ -9,7 +9,7 @@ namespace ShootTheRagdoll.Player
     [RequireComponent(typeof(PlayerAnimator))]
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private Camera camera;
+        [SerializeField] private new Camera camera;
         [SerializeField] private LayerMask walkableLayers;
         
         private NavMeshAgent _agent;
@@ -19,8 +19,7 @@ namespace ShootTheRagdoll.Player
         private void Start()
         {
             GetComponents();
-            
-            InputManager.Instance.MovePressed += Move;
+            SubscribeToMoveTriggeredEvent();
         }
 
 
@@ -28,6 +27,12 @@ namespace ShootTheRagdoll.Player
         {
             _agent = GetComponent<NavMeshAgent>();
             _playerAnimator = GetComponent<PlayerAnimator>();
+        }
+
+
+        private void SubscribeToMoveTriggeredEvent()
+        {
+            InputManager.Instance.MoveTriggered += Move;
         }
 
         

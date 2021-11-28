@@ -7,19 +7,20 @@ namespace ShootTheRagdoll.Utility
     [RequireComponent(typeof(PlayerInput))]
     public class InputManager : Singleton<InputManager>
     {
+        private const string MOVE_ACTION_NAME = "Move";
+        private const string SHOOT_ACTION_NAME = "Shoot";
+        private const string ROTATE_CAMERA_ACTION_NAME = "Rotate Camera";
+        
         private PlayerInput _playerInput;
 
         private InputAction _moveAction;
         private InputAction _shootAction;
         private InputAction _rotateCameraAction;
 
-        public event Action MovePressed;
-        public event Action ShootPressed;
+        public event Action MoveTriggered;
+        public event Action ShootTriggered;
 
         public float CameraMovementDelta => _rotateCameraAction.ReadValue<float>();
-
-        
-        
         
 
         public void SwitchToOnTowerActions()
@@ -37,7 +38,7 @@ namespace ShootTheRagdoll.Utility
         private void SwitchActionMap(string newMap)
         {
             _playerInput.SwitchCurrentActionMap(newMap);
-            _rotateCameraAction = _playerInput.actions.FindAction("Rotate Camera");
+            _rotateCameraAction = _playerInput.actions.FindAction(ROTATE_CAMERA_ACTION_NAME);
         }
 
 
@@ -59,28 +60,28 @@ namespace ShootTheRagdoll.Utility
 
         private void GetActions()
         {
-            _moveAction = _playerInput.actions.FindAction("Move");
-            _shootAction = _playerInput.actions.FindAction("Shoot");
-            _rotateCameraAction = _playerInput.actions.FindAction("Rotate Camera");
+            _moveAction = _playerInput.actions.FindAction(MOVE_ACTION_NAME);
+            _shootAction = _playerInput.actions.FindAction(SHOOT_ACTION_NAME);
+            _rotateCameraAction = _playerInput.actions.FindAction(ROTATE_CAMERA_ACTION_NAME);
         }
 
 
         private void ConnectActionsWithEvents()
         {
-            _moveAction.performed += OnMovePressed;
-            _shootAction.performed += OnShootPressed;
+            _moveAction.performed += OnMoveTriggered;
+            _shootAction.performed += OnShootTriggered;
         }
 
 
-        private void OnMovePressed(InputAction.CallbackContext context)
+        private void OnMoveTriggered(InputAction.CallbackContext context)
         {
-            MovePressed?.Invoke();
+            MoveTriggered?.Invoke();
         }
         
         
-        private void OnShootPressed(InputAction.CallbackContext context)
+        private void OnShootTriggered(InputAction.CallbackContext context)
         {
-            ShootPressed?.Invoke();
+            ShootTriggered?.Invoke();
         }
     }
 }

@@ -12,14 +12,22 @@ namespace ShootTheRagdoll.Player.Weapon
 
         private void Start()
         {
-            InputManager.Instance.ShootPressed += Shoot;
+            SubscribeToShootTriggeredEvent();
+        }
+
+
+        private void SubscribeToShootTriggeredEvent()
+        {
+            InputManager.Instance.ShootTriggered += Shoot;
         }
 
 
         private void Shoot()
         {
-            Quaternion rotation = Quaternion.LookRotation((aimTargetTransform.position - shootPointTransform.position).normalized);
-            GameObject proj = Instantiate(projectilePrefab, shootPointTransform.position, rotation);
+            Vector3 directionToAimTarget = (aimTargetTransform.position - shootPointTransform.position).normalized;
+            Quaternion rotation = Quaternion.LookRotation(directionToAimTarget);
+            
+            Instantiate(projectilePrefab, shootPointTransform.position, rotation);
         }
     }
 }
