@@ -1,7 +1,8 @@
 ﻿using Cinemachine;
+using ShootTheRagdoll.Utility;
 using UnityEngine;
 
-namespace ShootTheRagdoll.Camera
+namespace ShootTheRagdoll.OrbitalCamera
 {
     [RequireComponent(typeof(CinemachineVirtualCamera))]
     public class OrbitalCameraMovementController : MonoBehaviour

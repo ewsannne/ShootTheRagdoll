@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ShootTheRagdoll.Camera
+namespace ShootTheRagdoll.OrbitalCamera
 {
     [CreateAssetMenu(fileName = "CameraSensitivitySettings", menuName = "Settings/Camera/Sensitivity")]
     public class OrbitalCameraSensitivitySettingsSO : ScriptableObject

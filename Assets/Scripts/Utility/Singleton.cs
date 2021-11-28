@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ShootTheRagdoll
+namespace ShootTheRagdoll.Utility
 {
     public class Singleton<T> : MonoBehaviour
         where T : Singleton<T>

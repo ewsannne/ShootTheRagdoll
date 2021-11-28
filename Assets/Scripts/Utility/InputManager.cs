@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootTheRagdoll
+namespace ShootTheRagdoll.Utility
 {
     [RequireComponent(typeof(PlayerInput))]
     public class InputManager : Singleton<InputManager>
@@ -18,6 +18,9 @@ namespace ShootTheRagdoll
 
         public float CameraMovementDelta => _rotateCameraAction.ReadValue<float>();
 
+        
+        
+        
 
         public void SwitchToOnTowerActions()
         {
@@ -51,7 +54,6 @@ namespace ShootTheRagdoll
         private void GetPlayerInput()
         {
             _playerInput = GetComponent<PlayerInput>();
-            _playerInput.actions.Enable();
         }
 
 
