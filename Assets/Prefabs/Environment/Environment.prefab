@@ -257,10 +257,10 @@ MonoBehaviour:
     onDemolition: 1
     onActivation: 0
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 4.3
+    lifeVariation: 1.4
+    fadeType: 3
+    fadeTime: 1.53
     sizeFilter: 0
   reset:
     transform: 1
@@ -474,10 +474,10 @@ MonoBehaviour:
     onDemolition: 1
     onActivation: 0
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 4.3
+    lifeVariation: 1.4
+    fadeType: 3
+    fadeTime: 1.53
     sizeFilter: 0
   reset:
     transform: 1
@@ -824,10 +824,10 @@ MonoBehaviour:
     onDemolition: 1
     onActivation: 0
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 4.3
+    lifeVariation: 1.4
+    fadeType: 3
+    fadeTime: 1.53
     sizeFilter: 0
   reset:
     transform: 1
@@ -1007,10 +1007,10 @@ MonoBehaviour:
     onDemolition: 1
     onActivation: 0
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 4.3
+    lifeVariation: 1.4
+    fadeType: 3
+    fadeTime: 1.53
     sizeFilter: 0
   reset:
     transform: 1
@@ -1190,10 +1190,10 @@ MonoBehaviour:
     onDemolition: 1
     onActivation: 0
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 4.3
+    lifeVariation: 1.4
+    fadeType: 3
+    fadeTime: 1.53
     sizeFilter: 0
   reset:
     transform: 1
@@ -1473,10 +1473,10 @@ MonoBehaviour:
     onDemolition: 1
     onActivation: 0
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 4.3
+    lifeVariation: 1.4
+    fadeType: 3
+    fadeTime: 1.53
     sizeFilter: 0
   reset:
     transform: 1
@@ -1656,10 +1656,10 @@ MonoBehaviour:
     onDemolition: 1
     onActivation: 0
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 4.3
+    lifeVariation: 1.4
+    fadeType: 3
+    fadeTime: 1.53
     sizeFilter: 0
   reset:
     transform: 1
