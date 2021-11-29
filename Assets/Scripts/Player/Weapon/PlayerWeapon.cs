@@ -1,4 +1,5 @@
-﻿using ShootTheRagdoll.Utility;
+﻿using ShootTheRagdoll.Input;
+using ShootTheRagdoll.Utility;
 using UnityEngine;
 
 namespace ShootTheRagdoll.Player.Weapon

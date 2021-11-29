@@ -1,8 +1,9 @@
 ﻿using System;
+using ShootTheRagdoll.Utility;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootTheRagdoll.Utility
+namespace ShootTheRagdoll.Input
 {
     [RequireComponent(typeof(PlayerInput))]
     public class InputManager : Singleton<InputManager>

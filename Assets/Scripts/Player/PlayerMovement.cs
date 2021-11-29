@@ -1,4 +1,5 @@
-﻿using ShootTheRagdoll.Utility;
+﻿using ShootTheRagdoll.Input;
+using ShootTheRagdoll.Utility;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -38,10 +39,11 @@ namespace ShootTheRagdoll.Player
         
         private void Move()
         {
-            Ray ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(ray, out RaycastHit hit, 40f, walkableLayers))
+            PointerWorldPosition pointerWorldPosition = PointerWorldPositionCalculator.Instance.GetPosition(walkableLayers);
+
+            if (pointerWorldPosition.HasPosition)
             {
-                _agent.SetDestination(hit.point);
+                _agent.SetDestination(pointerWorldPosition.Position);
             }
         }
 

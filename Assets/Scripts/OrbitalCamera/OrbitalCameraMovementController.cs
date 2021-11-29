@@ -1,4 +1,5 @@
 ﻿using Cinemachine;
+using ShootTheRagdoll.Input;
 using ShootTheRagdoll.Utility;
 using UnityEngine;
 

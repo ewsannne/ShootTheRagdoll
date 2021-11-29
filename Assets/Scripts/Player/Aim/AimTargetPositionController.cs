@@ -1,19 +1,23 @@
-﻿using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using ShootTheRagdoll.Input;
+using ShootTheRagdoll.Utility;
+using UnityEngine;
 
 namespace ShootTheRagdoll.Player.Aim
 {
     public class AimTargetPositionController : MonoBehaviour
     {
-        [SerializeField] private new Camera camera;
-
-
         private void Update()
         {
-            Ray ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.SphereCast(ray, 0.2f, out RaycastHit hit))
+            MoveToPointerPosition();
+        }
+
+
+        private void MoveToPointerPosition()
+        {
+            PointerWorldPosition pointerWorldPosition = PointerWorldPositionCalculator.Instance.GetPosition();
+            if (pointerWorldPosition.HasPosition)
             {
-                transform.position = hit.point;
+                transform.position = pointerWorldPosition.Position;
             }
         }
     }
