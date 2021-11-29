@@ -126,7 +126,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: 9bf69e3279d397d49b45c706ecdd0ba3, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -674,13 +675,14 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     1: SHAPES_URP
-    7: SHAPES_URP
+    7: 
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
     Standalone: 1
   il2cppCompilerConfiguration:
     Android: 2
+    Standalone: 2
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
