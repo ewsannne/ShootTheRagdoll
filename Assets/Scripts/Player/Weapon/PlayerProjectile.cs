@@ -1,4 +1,5 @@
-﻿using ShootTheRagdoll.Ragdoll;
+﻿using System;
+using ShootTheRagdoll.Ragdoll;
 using UnityEngine;
 
 namespace ShootTheRagdoll.Player.Weapon
@@ -10,6 +11,8 @@ namespace ShootTheRagdoll.Player.Weapon
         [SerializeField] private PlayerProjectileForceSettingsSO forceSettings;
         
         private Rigidbody _rigidbody;
+
+        public event Action<Vector3> CollidedWithRock;
 
         private bool DidHit(string layerName, Component other) =>
             other.gameObject.layer == LayerMask.NameToLayer(layerName);
@@ -35,12 +38,16 @@ namespace ShootTheRagdoll.Player.Weapon
         }
         
         
-        // Refactor if going to add destroyable objects and/or chickens
         private void OnTriggerEnter(Collider other)
         {
             if (DidHit("Enemy", other))
             {
                 KillEnemy(other);
+            }
+
+            if (DidHit("Rocks", other))
+            {
+                DemolishRock();
             }
             
             Destroy(gameObject);
@@ -54,6 +61,11 @@ namespace ShootTheRagdoll.Player.Weapon
             
             ragdollController.Die(transform.forward * forceSettings.ForceOnImpact, other.attachedRigidbody);
         }
-        
+
+
+        private void DemolishRock()
+        {
+            CollidedWithRock?.Invoke(transform.position);
+        }
     }
 }

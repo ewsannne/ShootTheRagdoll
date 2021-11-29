@@ -1,9 +1,9 @@
 ﻿using System;
 using ShootTheRagdoll.Input;
-using ShootTheRagdoll.Player;
+using ShootTheRagdoll.Player.Movement;
 using UnityEngine;
 
-namespace ShootTheRagdoll
+namespace ShootTheRagdoll.Tower
 {
     public class ShootingZone : MonoBehaviour
     {

@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7091080085075845260}
   - component: {fileID: 7136119797485827353}
+  - component: {fileID: 3124460818237177780}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -78,3 +79,43 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4589438797270395775, guid: f531f4f03324d5b4683de4daa72be437, type: 3}
   shootPointTransform: {fileID: 7091080084587420006}
   aimTargetTransform: {fileID: 0}
+--- !u!114 &3124460818237177780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7091080085075845261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aae98af4160c3f44a105545f7b49970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 0
+  maxDistance: 50
+  target: {fileID: 0}
+  rounds: 2
+  rate: 0.3
+  strength: 2.5
+  radius: 0.49
+  demolishCluster: 1
+  affectInactive: 1
+  rigid: 1
+  rigidRoot: 1
+  rigidBody: 1
+  damage: 1
+  debris: 1
+  dust: 0
+  flash: 0
+  Flash:
+    intensityMin: 0.5
+    intensityMax: 0.7
+    rangeMin: 5
+    rangeMax: 7
+    distance: 0.4
+    color: {r: 1, g: 1, b: 0.8, a: 1}
+  mask: -1
+  tagFilter: Untagged
+  showRay: 1
+  showHit: 1
+  shooting: 0

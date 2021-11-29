@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using ShootTheRagdoll.Input;
-using ShootTheRagdoll.Player.Movement;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace ShootTheRagdoll.Player
+namespace ShootTheRagdoll.Player.Movement
 {
     [RequireComponent(typeof(NavMeshAgent))]
     [RequireComponent(typeof(PlayerAnimator))]
@@ -64,7 +63,6 @@ namespace ShootTheRagdoll.Player
         private void Move()
         {
             PointerWorldPosition pointerWorldPosition = PointerWorldPositionCalculator.Instance.GetPosition(walkableLayers);
-
             if (pointerWorldPosition.HasPosition)
             {
                 _agent.SetDestination(pointerWorldPosition.Position);

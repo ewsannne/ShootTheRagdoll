@@ -19,6 +19,12 @@ namespace ShootTheRagdoll.Player
 
         private void Awake()
         {
+            GetAnimator();
+        }
+
+
+        private void GetAnimator()
+        {
             _animator = GetComponent<Animator>();
         }
     }
