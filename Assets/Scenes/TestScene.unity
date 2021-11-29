@@ -1177,7 +1177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230334680526317542, guid: 232493d91ac78a248ae35d3a5dae1490, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.828
+      value: 0.697
       objectReference: {fileID: 0}
     - target: {fileID: 4698889462686332802, guid: 232493d91ac78a248ae35d3a5dae1490, type: 3}
       propertyPath: damage.enable
