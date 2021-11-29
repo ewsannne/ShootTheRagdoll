@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace ShootTheRagdoll.UI
 {
@@ -33,7 +34,7 @@ namespace ShootTheRagdoll.UI
         private void Place()
         {
             Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(camera, worldPositionTransform.position);
-            _rectTransform.anchoredPosition = screenPoint - canvasRectTransform.sizeDelta / 2f;
+            _rectTransform.anchoredPosition = screenPoint - canvasRectTransform.sizeDelta * 0.5f;
         }
     }
 }

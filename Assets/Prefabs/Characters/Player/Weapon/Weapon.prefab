@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce050a156e18cc4387ffebb4b005d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRateSettings: {fileID: 11400000, guid: e056eda61cd1d8448bd484f99f8a060d, type: 2}
   projectilePrefab: {fileID: 4589438797270395775, guid: f531f4f03324d5b4683de4daa72be437, type: 3}
   shootPointTransform: {fileID: 7091080084587420006}
   aimTargetTransform: {fileID: 0}

@@ -6,6 +6,9 @@ namespace ShootTheRagdoll.Player.Weapon
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerProjectile : MonoBehaviour
     {
+        [SerializeField] private float speed = 40f;
+        [SerializeField] private PlayerProjectileForceSettingsSO forceSettings;
+        
         private Rigidbody _rigidbody;
 
         private bool DidHit(string layerName, Component other) =>
@@ -27,7 +30,8 @@ namespace ShootTheRagdoll.Player.Weapon
 
         private void ApplyInitialForce()
         {
-            _rigidbody.AddForce(transform.forward * 50f, ForceMode.Impulse);
+            Vector3 force = transform.forward * speed;
+            _rigidbody.AddForce(force, ForceMode.Impulse);
         }
         
         
@@ -48,7 +52,7 @@ namespace ShootTheRagdoll.Player.Weapon
             Transform root = other.transform.root;
             RagdollController ragdollController = root.GetComponent<RagdollController>();
             
-            ragdollController.Die(_rigidbody.velocity, other.attachedRigidbody);
+            ragdollController.Die(transform.forward * forceSettings.ForceOnImpact, other.attachedRigidbody);
         }
         
     }

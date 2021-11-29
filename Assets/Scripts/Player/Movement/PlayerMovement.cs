@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using ShootTheRagdoll.Input;
+using ShootTheRagdoll.Player.Movement;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,6 +10,7 @@ namespace ShootTheRagdoll.Player
     [RequireComponent(typeof(PlayerAnimator))]
     public class PlayerMovement : MonoBehaviour
     {
+        [SerializeField] private PlayerMoveSpeedSettingsSO moveSpeedSettings;
         [SerializeField] private LayerMask walkableLayers;
         
         private NavMeshAgent _agent;
@@ -36,6 +38,7 @@ namespace ShootTheRagdoll.Player
         {
             GetComponents();
             SubscribeToMoveTriggeredEvent();
+            SetMovementSpeed();
         }
 
 
@@ -49,6 +52,12 @@ namespace ShootTheRagdoll.Player
         private void SubscribeToMoveTriggeredEvent()
         {
             InputManager.Instance.MoveTriggered += Move;
+        }
+
+
+        private void SetMovementSpeed()
+        {
+            _agent.speed = moveSpeedSettings.MovementSpeed;
         }
 
         

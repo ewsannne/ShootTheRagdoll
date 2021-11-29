@@ -101,7 +101,7 @@
                     "id": "ee4a2091-df4c-490a-bae4-1cc8a87db6b1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap,Hold"
+                    "interactions": ""
                 },
                 {
                     "name": "Rotate Camera",
@@ -127,7 +127,7 @@
                 {
                     "name": "",
                     "id": "d1d216e4-7391-4574-bd60-bd9bde2747cd",
-                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "path": "<Touchscreen>/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "Mobile",

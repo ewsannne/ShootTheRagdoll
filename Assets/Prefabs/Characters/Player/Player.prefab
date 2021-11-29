@@ -1947,6 +1947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed58045ec311ac43b345929e1032fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeedSettings: {fileID: 11400000, guid: bf1a4bedd20c7884db8cff7a16fb62bb, type: 2}
   walkableLayers:
     serializedVersion: 2
     m_Bits: 768

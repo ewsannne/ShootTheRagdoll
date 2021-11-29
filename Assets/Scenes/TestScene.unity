@@ -236,7 +236,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/Rotate Camera[/Mouse/delta/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: OnTheGround
+  m_DefaultActionMap: 29f873ca-e8aa-4cd6-9e40-2a0d72276498
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1579413239}
 --- !u!114 &734369737

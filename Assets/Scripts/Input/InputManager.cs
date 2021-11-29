@@ -1,6 +1,7 @@
 ﻿using System;
 using ShootTheRagdoll.Utility;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace ShootTheRagdoll.Input
@@ -22,6 +23,8 @@ namespace ShootTheRagdoll.Input
         public event Action ShootTriggered;
 
         public float CameraMovementDelta => _rotateCameraAction.ReadValue<float>();
+
+        private bool ShootButtonHold => Mathf.Approximately(_shootAction.ReadValue<float>(), 1f);
         
 
         public void SwitchToOnTowerActions()
@@ -92,11 +95,26 @@ namespace ShootTheRagdoll.Input
         {
             MoveTriggered?.Invoke();
         }
-        
-        
+
+
         private void OnShootTriggered(InputAction.CallbackContext context)
         {
+            OnShootTriggered();
+        }
+        
+        
+        private void OnShootTriggered()
+        {
             ShootTriggered?.Invoke();
+        }
+        
+        
+        private void Update()
+        {
+            if (ShootButtonHold)
+            {
+                OnShootTriggered();
+            }
         }
     }
 }
