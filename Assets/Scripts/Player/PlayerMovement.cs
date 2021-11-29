@@ -1,8 +1,7 @@
-﻿using ShootTheRagdoll.Input;
-using ShootTheRagdoll.Utility;
+﻿using System.Collections;
+using ShootTheRagdoll.Input;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
 
 namespace ShootTheRagdoll.Player
 {
@@ -10,13 +9,29 @@ namespace ShootTheRagdoll.Player
     [RequireComponent(typeof(PlayerAnimator))]
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private new Camera camera;
         [SerializeField] private LayerMask walkableLayers;
         
         private NavMeshAgent _agent;
         private PlayerAnimator _playerAnimator;
 
 
+        public void LeaveTower(Vector3 destination)
+        {
+            _agent.SetDestination(destination);
+            InputManager.Instance.DeactivatePointerInput();
+            
+            StartCoroutine(LeavingTowerRoutine());
+        }
+
+
+        private IEnumerator LeavingTowerRoutine()
+        {
+            yield return new WaitUntil(() => _agent.isStopped);
+            
+            InputManager.Instance.ActivatePointerInput();
+        }
+        
+        
         private void Start()
         {
             GetComponents();

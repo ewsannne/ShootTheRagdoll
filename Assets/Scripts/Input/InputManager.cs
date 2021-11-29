@@ -39,7 +39,21 @@ namespace ShootTheRagdoll.Input
         private void SwitchActionMap(string newMap)
         {
             _playerInput.SwitchCurrentActionMap(newMap);
-            _rotateCameraAction = _playerInput.actions.FindAction(ROTATE_CAMERA_ACTION_NAME);
+            _rotateCameraAction = _playerInput.currentActionMap.FindAction(ROTATE_CAMERA_ACTION_NAME);
+        }
+        
+        
+        public void ActivatePointerInput()
+        {
+            _moveAction.Enable();
+            _shootAction.Enable();
+        }
+        
+        
+        public void DeactivatePointerInput()
+        {
+            _moveAction.Disable();
+            _shootAction.Disable();
         }
 
 
@@ -63,7 +77,7 @@ namespace ShootTheRagdoll.Input
         {
             _moveAction = _playerInput.actions.FindAction(MOVE_ACTION_NAME);
             _shootAction = _playerInput.actions.FindAction(SHOOT_ACTION_NAME);
-            _rotateCameraAction = _playerInput.actions.FindAction(ROTATE_CAMERA_ACTION_NAME);
+            _rotateCameraAction = _playerInput.currentActionMap.FindAction(ROTATE_CAMERA_ACTION_NAME);
         }
 
 

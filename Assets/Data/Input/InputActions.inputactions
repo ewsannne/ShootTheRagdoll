@@ -106,7 +106,7 @@
                 {
                     "name": "Rotate Camera",
                     "type": "Value",
-                    "id": "4813114f-39c3-446c-a479-935a3246d5df",
+                    "id": "6e531ca8-b3ce-42c4-9ecf-cb28c4477630",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
@@ -137,10 +137,10 @@
                 },
                 {
                     "name": "",
-                    "id": "a5d92e6c-0f7a-4dcf-8257-05c8c57282f1",
+                    "id": "6bc02984-036a-4774-933a-96ff1ecbb861",
                     "path": "<Touchscreen>/delta/x",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "Scale(factor=-1)",
                     "groups": "Mobile",
                     "action": "Rotate Camera",
                     "isComposite": false,
@@ -148,7 +148,7 @@
                 },
                 {
                     "name": "X Movement",
-                    "id": "9626ed55-2f7a-4f0b-96eb-08fdb05900da",
+                    "id": "1a48ad24-2195-410c-8811-c5249bbfc998",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -158,8 +158,8 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "883f9344-eece-41b4-bf25-efcb47a49349",
+                    "name": "Negative",
+                    "id": "7f619281-91ec-47ed-acb9-178adf912d6d",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -169,8 +169,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "38286daa-f9da-4fd8-834f-465f527bbf4c",
+                    "name": "Positive",
+                    "id": "210874bf-5090-4288-af34-1114a3c8a05f",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
